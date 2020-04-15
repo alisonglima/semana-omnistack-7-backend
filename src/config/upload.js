@@ -21,7 +21,6 @@ const storageTypes = {
       crypto.randomBytes(16, (err, hash) => {
         if (err) callback(err);
 
-        // eslint-disable-next-line no-param-reassign
         newFile.key = `${hash.toString('hex')}-${file.originalname}`;
 
         callback(null, newFile.key);
